@@ -1,16 +1,20 @@
 <?php
 use yii\helpers\Html;
-
 /* @var $this yii\web\View */
-$this->title = 'About';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'О приложении';
+
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        This is the About page. You may modify the following file to customize its content:
-    </p>
-
-    <code><?= __FILE__ ?></code>
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <h1><?= Html::encode($this->title) ?></h1>
+        <code> echo "Hello, KIT" :)</code> <br><br>
+        <p>
+            Это приложение было задумано как часть одного гораздо большего проекта, а вылилось в самостоятельный проект. Результаты труда вы можете испытать лично. 
+        </p>
+        <p>
+            Разработчик сего инструмента - студент 4 курса Кафедры Информационных Технологий Ивановского Государственного Энергетического Университета, Денис Субботин.
+        </p>
+    </div>
+    <div class="col-md-1"></div>
 </div>

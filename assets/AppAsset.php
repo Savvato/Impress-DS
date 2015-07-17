@@ -21,13 +21,15 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/material.css',
         'css/ripples.css',
-        'css/roboto.css'
+        'css/roboto.css',
+        'css/redactor.css'
     ];
     public $js = [
         'js/material.js',
         'js/ripples.js',
-        'js/impress.jsSS',
+        'js/impress.js',
         'js/main.js',
+        'js/redactor.js',
         'js/app.js'
     ];
     public $depends = [

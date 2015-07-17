@@ -1,3 +1,6 @@
 $(document).ready(function(){
-	$.material.init()
+	$.material.init();
+	$('#redactor').redactor({
+        plugins: ['underline', 'scriptbuttons', 'bufferbuttons']
+    });
 });

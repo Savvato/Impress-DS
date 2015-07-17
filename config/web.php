@@ -41,6 +41,9 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
     ],
     'params' => $params,
+    'aliases' => [
+        '@imperavi' => '@vendor/imperavi-redactor-widget',
+    ],
 ];
 
 if (YII_ENV_DEV) {

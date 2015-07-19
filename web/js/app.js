@@ -1,18 +1,19 @@
 var numOfSlides = 1;
 var currentSlide = 1;
-var slides = [{num: 1, slide: ""}];
+var slides = [{id: 1, slide: ""}];
 var templateOfButton = function(num){
 	return "<li><a class='btn btn-default btn-raised' onclick='setCurrentSlide(this, " + num + ")'>Слайд " 
 		+ num
 		+ "<div class='ripple-wrapper'></div></a> </li>";
-}
+};
 $('#add-slide').click(function(){
 	numOfSlides ++;
-	slides.push({num: numOfSlides,
+	slides.push({id: numOfSlides,
 		slide: ""});
-	$('.slides-list ul').append(templateOfButton(numOfSlides));
-	$.material.init()
-	
+    $('.slides-list ul').append(templateOfButton(numOfSlides));
+	var button = $('.slides-list ul').children().last().children();
+	$.material.init();
+	setCurrentSlide(button, numOfSlides);
 });
 
 var setCurrentSlide = function(button, curSlide){
@@ -24,10 +25,17 @@ var setCurrentSlide = function(button, curSlide){
 		$(button).addClass('btn-primary');
 	});
 	$('.slide').show(400);
-}
+};
 
 var saveSlide = function(){
 	slides[currentSlide - 1].slide = $('#redactor').redactor('code.get');
-	//$('#success').fadeIn(300, function() {delay(100); $(this).fadeOut(100)});
 	$('#success').fadeIn(300).delay(400).fadeOut(300);
-}
+};
+
+$('#showPresentation').click(function(){
+	var actionUrl = $('#showPresentation').attr('data-action');
+	$.post(actionUrl, {slides: slides}, function(data){
+		var presentationWindow = window.open();
+		presentationWindow.document.write(data);
+	});
+});

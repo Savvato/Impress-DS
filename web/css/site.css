@@ -14,13 +14,6 @@ body {
     padding: 70px 15px 20px;
 }
 
-.footer {
-    height: 60px;
-    background-color: #f5f5f5;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
-
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -31,57 +24,6 @@ body {
     padding: 14px 24px;
 }
 
-
-.not-set {
-    color: #c55;
-    font-style: italic;
-}
-
-/* add sorting icons to gridview sort links */
-a.asc:after, a.desc:after {
-    position: relative;
-    top: 1px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1;
-    padding-left: 5px;
-}
-
-a.asc:after {
-    content: /*"\e113"*/ "\e151";
-}
-
-a.desc:after {
-    content: /*"\e114"*/ "\e152";
-}
-
-.sort-numerical a.asc:after {
-    content: "\e153";
-}
-
-.sort-numerical a.desc:after {
-    content: "\e154";
-}
-
-.sort-ordinal a.asc:after {
-    content: "\e155";
-}
-
-.sort-ordinal a.desc:after {
-    content: "\e156";
-}
-
-.grid-view th {
-    white-space: nowrap;
-}
-
-.hint-block {
-    display: block;
-    margin-top: 5px;
-    color: #999;
-}
 
 .error-summary {
     color: #a94442;
@@ -96,7 +38,7 @@ a.desc:after {
 }
 
 .slides {
-    min-height: 800px;
+    min-height: 200px;
 }
 
 .app {
@@ -107,14 +49,6 @@ a.desc:after {
     padding-top: 10px;    
 }
 
-/*.slides-list li {
-    background-color: #009688; 
-    margin-bottom: 10px;
-}*/
-
-/*.slides-list li a:active {
-    background-color: #4caf50; 
-}*/
 
 .slides-list li a {
     color: rgba(255, 255, 255, 0.84);
@@ -126,4 +60,6 @@ a.desc:after {
     margin-top: 10%;
 }
 
-
+#redactor {
+    margin-top: 40px;
+}

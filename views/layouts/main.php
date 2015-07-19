@@ -2,7 +2,6 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 /* @var $this \yii\web\View */
@@ -27,7 +26,7 @@ AppAsset::register($this);
         <?php
             NavBar::begin([
                 'brandLabel' => 'Impress DS',
-                'brandUrl' => Yii::$app->homeUrl,
+                'brandUrl' => ['/site/index'],
                 'options' => [
                     'class' => 'navbar-default navbar-fixed-top',
                 ],

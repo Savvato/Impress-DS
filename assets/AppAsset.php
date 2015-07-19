@@ -19,7 +19,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'css/material.css',
+        'css/material.min.css',
         'css/ripples.css',
         'css/roboto.css',
         'css/redactor.css'
@@ -27,7 +27,6 @@ class AppAsset extends AssetBundle
     public $js = [
         'js/material.js',
         'js/ripples.js',
-        'js/impress.js',
         'js/main.js',
         'js/redactor.js',
         'js/app.js'

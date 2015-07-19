@@ -3,11 +3,38 @@
 $params = require(__DIR__ . '/params.php');
 
 $config = [
-    'id' => 'IimpressDE',
+    'id' => 'ImpressDE',
     'basePath' => dirname(__DIR__),
     'language' => 'ru-RU',
     'bootstrap' => ['log'],
     'components' => [
+        'assetManager' => [
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'js' => [
+                        'jquery.min.js'
+                    ]
+                ],
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => [
+                        'css/bootstrap.min.css'
+                    ],
+                ],
+            ],
+        ],
+
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+
+            'rules' => [
+                'main' => 'site/index',
+                'app' => 'site/app',
+                'about' => 'site/about',
+                'contact' => 'site/contact'
+            ],
+
+        ],
+
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'lweinL3k34nLknGlskbmzDLksdgSlk',

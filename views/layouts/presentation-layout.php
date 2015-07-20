@@ -14,13 +14,48 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= Html::encode($this->title) ?></title>
-    
+    <style>
+        .step {
+            position: relative;
+            width: 900px;
+            padding: 40px;
+            margin: 20px auto;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing:    border-box;
+            -ms-box-sizing:     border-box;
+            -o-box-sizing:      border-box;
+            box-sizing:         border-box;
+
+            font-family: 'PT Serif', georgia, serif;
+            font-size: 48px;
+            line-height: 1.5;
+        }
+
+        .slide {
+            display: block;
+
+            width: 900px;
+            height: 700px;
+            padding: 40px 60px;
+
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, .3);
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+            color: rgb(102, 102, 102);
+            text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 30px;
+            line-height: 36px;
+            letter-spacing: -1px;
+        }
+    </style>
 </head>
 <body>
-<?php $this->beginBody() ?>  
-    <!--<div class="no-support-message">
-        Your browser doesn't support impress.js. Try Chrome or Safari. 
-    </div>-->
+<?php $this->beginBody() ?>
      <?= $content ?>    
      <script>
         /**

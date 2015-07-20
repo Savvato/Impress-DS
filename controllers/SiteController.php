@@ -100,4 +100,12 @@ class SiteController extends Controller
     {
         return $this->render('app');
     }
+
+    public function actionPresentation()
+    {
+        $this->layout = 'presentation-layout';
+        $request = Yii::$app->request;
+        $slides = $request->post('slides');
+        return $this->render('presentation', ['slides' => $slides]);
+    }
 }

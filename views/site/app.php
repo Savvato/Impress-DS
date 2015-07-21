@@ -19,18 +19,18 @@
                             style="font-size: 30px; height: 60px; width: 60px;">
                     </button>
 				</div>
-				<div class="col-md-4"></div>
+				<div class="col-md-4 "></div>
 			</div>
 			<div class="slides-list">
 			    <ul class="nav nav-pills nav-stacked">
 					<li><a class='btn btn-primary btn-raised' onclick="setCurrentSlide(this, 1)">Слайд 1</a> </li>
 				</ul>
 			</div>
-	</div>	
-	<div class="col-md-1"></div>
+	</div>
+	<div class="col-md-1 hidden-tablet hidden-phone"></div>
 	<div class="col-md-7">
-		
-		<div class="well container slide">
+
+		<div class="well container-fluid slide">
 			<a onclick="saveSlide()" class="btn btn-primary"><span class="mdi-content-save"></span>  Сохранить слайд</a>
 			<a onclick="removeSlide()" class="btn btn-danger"><span class="mdi-action-delete"></span>  Удалить слайд</a>
 			<textarea id="redactor" name="redactor"></textarea>
@@ -96,7 +96,7 @@
 <button id="showPresentation" 
 	class="btn btn-primary btn-fab btn-raised mdi-action-open-in-browser"  
 	data-action="<?php echo Url::toRoute(['site/presentation']); ?>"
-	style="position: fixed; top: 90%; left: 90%; font-size: 30px; height: 60px; width: 60px;"
+	style="position: fixed; top: 85%; left: 90%; font-size: 30px; height: 60px; width: 60px;"
 	data-toggle="modal"
 	data-target="#message" 
 	data-placement="left" 

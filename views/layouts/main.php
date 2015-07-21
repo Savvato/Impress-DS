@@ -28,7 +28,7 @@ AppAsset::register($this);
                 'brandLabel' => 'Impress DS',
                 'brandUrl' => ['/site/index'],
                 'options' => [
-                    'class' => 'navbar-default navbar-fixed-top',
+                    'class' => 'navbar-default navbar-static-top',
                 ],
             ]);
             echo Nav::widget([
@@ -42,13 +42,17 @@ AppAsset::register($this);
             ]);
             NavBar::end();
         ?>
-        
-            <?= $content ?>
-        
-        
-
+        <?= $content ?>
     </div>
-
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-left">&copy; Savvato, <?= date('Y') ?></p>
+            <p class="pull-right"><?= Yii::powered() ?>,
+                <a href="https://github.com/impress/impress.js?utm_content=buffer4bb8d&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer">Impress.JS</a> ,
+                <a href="http://imperavi.com/redactor/">Imperavi Redactor</a>
+            </p>
+        </div>
+    </footer>
 
 <?php $this->endBody() ?>
 </body>
